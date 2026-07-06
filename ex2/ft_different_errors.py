@@ -1,6 +1,7 @@
 from typing import Any
 
-def garden_oerations(operation_number: int) -> None:
+
+def garden_operations(operation_number: int) -> None:
     print(f"Testing operation {operation_number}...")
     if operation_number == 0:
         int("abc")
@@ -18,7 +19,7 @@ def garden_oerations(operation_number: int) -> None:
 def test_error_types() -> None:
     for i in range(0, 5):
         try:
-            garden_oerations(i)
+            garden_operations(i)
         except ValueError as e:
             print(f"Caught ValueError: {e}")
         except ZeroDivisionError as e:

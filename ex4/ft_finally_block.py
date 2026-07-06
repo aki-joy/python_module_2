@@ -18,19 +18,21 @@ def test_watering_system() -> None:
         for plant in plants:
             water_plant(plant)
     except PlantError as e:
-        print(f"Caught GardenError: {e}")
+        print(f"Caught PlantError: {e}")
         print("..Ending tests and returning to main")
+        return
     finally:
         print("Closing watering system...\n")
     plants[1] = "carrot"
 
-    print("Testing valid plants...")
+    print("Testing invalid plants...")
     try:
         for plant in plants:
             water_plant(plant)
     except PlantError as e:
         print(f"Caught GardenError: {e}")
         print("..Ending tests and returning to main")
+        return
     finally:
         print("Closing watering system...\n")
 
